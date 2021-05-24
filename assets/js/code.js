@@ -129,3 +129,4 @@ let dataFromUserToLowerCase=0;
      Result.innerHTML=` ${string}`;
 
 }
+

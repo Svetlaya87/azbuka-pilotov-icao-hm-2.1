@@ -37,13 +37,19 @@
                      type="text" 
                      class="form-control" 
                      id="dataInput" 
-                     pattern="[A-Za-z0-9]{1,}"
+                     pattern="^[a-zA-Z0-9]+$|(^[^':;.,%_$\(\)#\|№\-{}@\[\]^&?/\\\А-Яа-я\s]+$)"
+                     required=''
                     
                       
                      
                      >
 			</div>
 
+           <!--
+               ^[a-zA-Z0-9]+$|(^[^':;.,%_$\(\)#\|№\-{}@\[\]^&?/\\\"А-Яа-я\s]+$)
+               " ' в регулярном выражении одна из ковычек не воспринимается (""- удалила из рег выражения в input), не помогает знак экранирования \
+        
+            --> 
 
             <div class="d-flex flex-row align-items-stretch justify-content-start">
                     <div class="pe-3">
@@ -54,7 +60,6 @@
             </div>
 							
 
-		
 		
        
         
