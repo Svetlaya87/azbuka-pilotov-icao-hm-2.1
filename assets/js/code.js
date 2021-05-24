@@ -26,10 +26,10 @@ function azbukaPilotov() {
     ]
 
     // разбираем Zero и т.д на  [Z,e,r,o] ит.д 
-    for (let y=0; y < numbers.length; y++) {
+   /* for (let y=0; y < numbers.length; y++) {
         numbers[y] = numbers[y].split('');
 
-    }
+    }*/
 
 
     let abbet = ['Alfa', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Washington', 'Xray', 'Yankee', 'Zulu'];
@@ -42,10 +42,10 @@ function azbukaPilotov() {
    
 
     /*эллемент массива letters переводим из строки в подмассив Alfa в [A, l, f, a]  */
-    for (let y=0; y < letters.length; y++) {
+   /* for (let y=0; y < letters.length; y++) {
         letters[y] = letters[y].split('');
 
-    }
+    }*/
 
 
 
@@ -88,11 +88,11 @@ function azbukaPilotov() {
     console.log('Numbers', numbers);
 
     // склеиваем все
-    for (let i=0; i< dataFromUser.length; i++  ) {
+   /* for (let i=0; i< dataFromUser.length; i++  ) {
         
         dataFromUser[i]=dataFromUser[i].join('');
     
-    }
+    }*/
 
     let string =  dataFromUser.join(' ');
 
