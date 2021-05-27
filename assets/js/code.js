@@ -1,11 +1,3 @@
-function Validation() {
-    let inpObj = document.getElementById("dataInput");
-    if (inpObj.checkValidity()) {
-      document.getElementById("validationMessage").innerHTML = Validation.validationMessage ;
-    } else {
-      document.getElementById("validationMessage").innerHTML = Validation.validationMessage;
-    } 
-} 
 
 
 
@@ -77,61 +69,36 @@ function azbukaPilotov() {
         //dataFromUser[0] = letters[0][1];
     //}
 
+    let answer = [];
 
-    for (let i =0; i< dataFromUser.length; i++  ){
-        for(var key in abbetNumbers) {
+    // for of  здесь i - значение, т.е [10,20,30] а в цикле for in значение i-это индексы(название ключей) -в массиве 0,1,2
+    for (let i of dataFromUser ){ 
+        
+        console.log(i);
 
-            if( dataFromUser[i]== key) {
-                 dataFromUser[i]=abbetNumbers[key];
-                 //console.log(abbetNumbers[key]);
-                 //console.log(dataFromUser[i]);
+            if( abbetNumbers[i] ) {
+
+                answer.push(abbetNumbers[i]);
+                 
+                 
                  document.getElementById("validationMessage").innerHTML=`Данные введены правильно`;
 
             }    else {
         
-                
-               /* dataFromUser[i]== ' ';
-                dataFromUser.pop();
-                
-                console.log(dataFromUser);*/
+              
                 document.getElementById("validationMessage").innerHTML=`Введите корректное значение: от a до z и/или от 0 до 9 `;
             }
-        }
+        
   
     }
 
-    dataFromUser= dataFromUser.join(" ");
+    answer= answer.join(" ");
    
-    Result.innerHTML=` ${dataFromUser}`;
+    Result.innerHTML=` ${answer}`;
     
    
 
-    /*сверяем буквенные символы пользователя с 1-й буквой в массиве letters. Если совпадают, то меняем букву пользователя на значение из массива */ 
-
-   /* for (let i =0; i< dataFromUser.length; i++  ){
-        for (let y; y<letters.length; y++){
-
-            if (dataFromUser[i] == letters[y][0]) {
-                dataFromUser[i] = letters[y][1];
-                
-               
-
-                
-                
-            } else {
-
-                dataFromUser.pop();
-                dataInput.innerHTML = `${dataFromUser}`;
-                console.log(dataFromUser);
-                Result.innerHTML=`Введите корректное значение: от а до я и/или от 0 до 9 `;
-
-
-            }
-        }
-    }*/
     
-    
-
     
       
     
@@ -141,18 +108,6 @@ function azbukaPilotov() {
 
  
 
- 
-
-    // console.log(dataFromUser);
-    //Result.innerHTML=` ${dataFromUser}`;
 
 }
 
-/*
-let string = ' ';
-if (dataFromUser[i]==string) {
-     dataFromUser =  dataFromUser.join(' ');
-
-}*/
-
-//"^[a-zA-Z0-9]+$|(^[^':;.,%_$\(\)#\|№\-{}@\[\]^&?/\\\А-Яа-я\s]+$)"
