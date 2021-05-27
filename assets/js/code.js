@@ -79,6 +79,8 @@ function azbukaPilotov() {
             if( abbetNumbers[i] ) {
 
                 answer.push(abbetNumbers[i]);
+
+                console.log(abbetNumbers[i]);
                  
                  
                  document.getElementById("validationMessage").innerHTML=`Данные введены правильно`;
