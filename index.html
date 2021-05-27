@@ -30,20 +30,26 @@
 		<!-- Input Data Form -->
 		<div class='row row-cols-sm row-cols-1 my-5 g-0'>
 			<div class="form-group d-flex flex-row py-1">
-			        <label class="w-50" for="azbukaPilotov">Введите значение</label>
+			        <label class="w-50" for="dataInput" oninput="Validation()">Введите значение</label>
 			        <input
 
-                    oninput="azbukaPilotov()"
+                     oninput="azbukaPilotov()"
                      type="text" 
                      class="form-control" 
                      id="dataInput" 
-                     pattern="^[a-zA-Z0-9]+$|(^[^':;.,%_$\(\)#\|№\-{}@\[\]^&?/\\\А-Яа-я\s]+$)"
-                     required=''
+                     pattern="^[a-zA-Z0-9]+$"
+                     required
                     
                       
                      
-                     >
+                    >
+
+                    
+
+
 			</div>
+
+            <output id="validationMessage" class="my-5 text-black-50"></output>
 
            <!--
                ^[a-zA-Z0-9]+$|(^[^':;.,%_$\(\)#\|№\-{}@\[\]^&?/\\\"А-Яа-я\s]+$)
