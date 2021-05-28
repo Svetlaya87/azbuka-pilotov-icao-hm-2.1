@@ -89,6 +89,7 @@ function azbukaPilotov() {
         
               
                 document.getElementById("validationMessage").innerHTML=`Введите корректное значение: от a до z и/или от 0 до 9 `;
+                return;
             }
         
   
